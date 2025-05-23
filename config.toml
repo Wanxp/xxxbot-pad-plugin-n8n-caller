@@ -1,0 +1,18 @@
+[N8nWebhook]
+enable = true
+#匹配消息的发送者wxid,只要这些才会触发回调
+sender=["wxid"]
+#匹配消息的前缀,只要这个前缀的才会触发回调
+message-keyword=["n:","N:","n8n:","N8N:","n：","N：","n8n：","N8N："]
+# n8n的webhook地址, 注意只支持post请求，消息体会作为请求体发送
+n8n-webhook-url = "https://n8n.example.com/webhook-test/wechat"
+# 支持 Basic Auth, Header Auth, None
+auth-type = "Header Auth"
+# Basic Auth 时当前值为用户名(username)
+# Header Auth时为HeaderName,
+# None 无需填写
+auth-key= "Authorization"
+# Basic Auth 时当前值为密码(password)
+# Header Auth时为HeaderValue,
+# None 无需填写
+auth-value= "你的token"
